@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+
+body
+{
+background-color: cornsilk;
+}
+
+.ProductSearch
+{
+  border: 2px solid black;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: blue;
+}
+
+.ButtonSearch
+{
+  border: 2px solid black;
+  text-align: center;
+  border-radius: 0 5px 5px 0;
+}
+
+.AdmPanel
+{
+  border: 2px solid red;
+  color: red;
+  text-align: center;
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 0 5px 5px 0;
+}
+
+.landing
+{
+  padding: 5px;
+  margin-top: 5px;
+  border: 2px solid black;
+}
+
+.data
+{
+  margin-top: 10px;
+  margin-right: 10px;
+  border: 2px solid cornflowerblue;
+  border-radius: 10px;
+  text-align: center;
+  color: darkblue;
+  padding: 5px;
+}
+
+.paypal
+{
+ margin: 0px;
+ width: max-content;
+ border: 4px solid cornflowerblue;
+}
+

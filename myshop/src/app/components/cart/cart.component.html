@@ -25,22 +25,23 @@
         </tbody>
     </table>
     <div class="summary">
-        <p>Do zapłaty: {{getCartPrice()}}</p>
+        <p style="color:darkblue">Do zapłaty: {{getCartPrice()}}</p>
     </div>
     <div class="payment">
-        <div id="paypal">
+        <div id="paypal" class="paypal">
+          <img src="assets/images/paypallogo.png" alt="" width="150" height="150">
         </div>
         <form action="http://www.jakubadamus.cba.pl/paypal.php" method="get" #paymentForm>
-            <input type="text" #firstName name="firstName" id="" placeholder="Imie">
-            <input type="text" #lastName name="lastName" id="" placeholder="Nazwisko">
-            <input type="text" #email name="email" id="" placeholder="Email">
-            <input type="text" name="phone" id="" placeholder="Telefon">
+            <input type="text" #firstName name="firstName" id="" class="data" placeholder="Imie">
+            <input type="text" #lastName name="lastName" id="" class="data" placeholder="Nazwisko" >
+            <input type="text" #email name="email" id="" class="data" placeholder="Email">
+            <input type="text" name="phone" id="" class="data" placeholder="Telefon">
             <ng-container *ngFor="let object of this.mainService.cart">
                 <input type="hidden" name="products[]" value="{{ object | json }}">
             </ng-container>
-            <label for="">Akceptuję regulamin:<input #regulamin type="checkbox" name="aggrement" id="" (change)="0">
+            <label for="" style="color: darkblue;">Akceptuję regulamin:<input #regulamin type="checkbox" name="aggrement" id="" (change)="0">
             </label>
-            <button [disabled]="!regulamin.checked" (click)="paymentForm.submit()">
+            <button [disabled]="!regulamin.checked" (click)="paymentForm.submit()" style="color: darkblue;">
                 Kup
             </button>
         </form>
