@@ -18,6 +18,7 @@ export class AdmProductsComponent implements OnInit {
   };
 
   ngOnInit(): void {
+    this.getProducts();
   }
 
   getProducts() {
